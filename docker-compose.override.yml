@@ -1,0 +1,55 @@
+version: '3.4'
+
+services:
+  commercial.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionString=Server=sqlserver;Database=PlatesCommercial;User Id=sa;Password=Pass@word;encrypt=False
+    ports:
+      - "15680:15680"
+      - "5680:5680"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+
+  marketing.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionString=Server=sqlserver;Database=PlatesMarketing;User Id=sa;Password=Pass@word;encrypt=False 
+    ports:
+      - "15681:15681"
+      - "5681:5681"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  sales.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionString=Server=sqlserver;Database=PlatesSales;User Id=sa;Password=Pass@word;encrypt=False 
+    ports:
+      - "15682:15682"
+      - "5682:5682"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+volumes:
+  rt-sqlserver:
+    external: false 
+

@@ -1,0 +1,132 @@
+name: dockercompose2317891468653728392
+services:
+  commercial.api:
+    build:
+      context: C:\Users\wayne\source\repos\Applications\RT Project
+      dockerfile: src/Services/Commercial/Commercial.API/Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ConnectionString: Server=sqlserver;Database=PlatesCommercial;User Id=sa;Password=Pass@word;encrypt=False
+    image: commercialapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 15680
+        published: "15680"
+        protocol: tcp
+      - mode: ingress
+        target: 5680
+        published: "5680"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  marketing.api:
+    build:
+      context: C:\Users\wayne\source\repos\Applications\RT Project
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ConnectionString: Server=sqlserver;Database=PlatesMarketing;User Id=sa;Password=Pass@word;encrypt=False
+    image: marketingapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 15681
+        published: "15681"
+        protocol: tcp
+      - mode: ingress
+        target: 5681
+        published: "5681"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  sales.api:
+    build:
+      context: C:\Users\wayne\source\repos\Applications\RT Project
+      dockerfile: src/Services/Sales/Sales.API/Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ConnectionString: Server=sqlserver;Database=PlatesSales;User Id=sa;Password=Pass@word;encrypt=False
+    image: salesapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 15682
+        published: "15682"
+        protocol: tcp
+      - mode: ingress
+        target: 5682
+        published: "5682"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  sqlserver:
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Pass@word
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose2317891468653728392_default

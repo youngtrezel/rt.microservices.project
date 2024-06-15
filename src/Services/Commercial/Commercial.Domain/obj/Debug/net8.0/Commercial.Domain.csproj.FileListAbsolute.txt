@@ -1,0 +1,12 @@
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\bin\Debug\net8.0\Commercial.Domain.deps.json
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\bin\Debug\net8.0\Commercial.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\bin\Debug\net8.0\Commercial.Domain.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.AssemblyInfoInputs.cache
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.AssemblyInfo.cs
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.sourcelink.json
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\refint\Commercial.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\Commercial.Domain.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Domain\obj\Debug\net8.0\ref\Commercial.Domain.dll

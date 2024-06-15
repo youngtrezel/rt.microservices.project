@@ -1,0 +1,12 @@
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\bin\Debug\net8.0\Sales.Domain.deps.json
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\bin\Debug\net8.0\Sales.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\bin\Debug\net8.0\Sales.Domain.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.AssemblyInfoInputs.cache
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.AssemblyInfo.cs
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.sourcelink.json
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\refint\Sales.Domain.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\Sales.Domain.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Domain\obj\Debug\net8.0\ref\Sales.Domain.dll
