@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eQ3xpO+1YJK3z4NicOrQdNNIqvhE8nSiNZ1JSZNS8Ag=",
+  "Source": "RTApiGateway",
+  "BasePath": "_content/RTApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

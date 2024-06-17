@@ -63,10 +63,14 @@ try
             var settings = scope.ServiceProvider.GetService<IOptions<AppSettings>>();
             context.Database.EnsureCreated();
 
-            Log.Information("Seeding data ({ApplicationContext})...", name);
-            new ApplicationDbContextSeed()
-            .SeedAsync(context, builder.Environment, contextLogger, settings)
-            .Wait();
+            if(!context.Plates.Any())
+            {
+                Log.Information("Seeding data ({ApplicationContext})...", name);
+                new ApplicationDbContextSeed()
+                .SeedAsync(context, builder.Environment, contextLogger, settings)
+                .Wait();
+            }
+
         }
     }
 }

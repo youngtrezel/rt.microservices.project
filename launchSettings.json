@@ -6,7 +6,8 @@
       "serviceActions": {
         "commercial.api": "StartDebugging",
         "marketing.api": "StartDebugging",
-        "sales.api": "StartDebugging"
+        "sales.api": "StartDebugging",
+        "rtapigateway": "StartDebugging"
       }
     }
   }

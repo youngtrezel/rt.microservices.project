@@ -6,28 +6,24 @@ services:
     build:
       context: .
       dockerfile: src/Services/Commercial/Commercial.API/Dockerfile
-    depends_on:
-      - sqlserver 
 
   marketing.api:
     image: ${DOCKER_REGISTRY-}marketingapi
     build:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
-    depends_on:
-      - sqlserver 
- 
+
+
   sales.api:
     image: ${DOCKER_REGISTRY-}salesapi
     build:
       context: .
       dockerfile: src/Services/Sales/Sales.API/Dockerfile
-    depends_on:
-      - sqlserver 
- 
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest 
 
 
-
+  rtapigateway:
+    image: ${DOCKER_REGISTRY-}rtapigateway
+    build:
+      context: .
+      dockerfile: src/BuildingBlocks/ApiGateway/RTApiGateway/Dockerfile
 

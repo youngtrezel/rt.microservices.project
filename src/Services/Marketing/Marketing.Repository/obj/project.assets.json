@@ -5585,8 +5585,8 @@
     },
     "Marketing.Domain/1.0.0": {
       "type": "project",
-      "path": "../../../../Marketing.Domain/Marketing.Domain.csproj",
-      "msbuildProject": "../../../../Marketing.Domain/Marketing.Domain.csproj"
+      "path": "../Marketing.Domain/Marketing.Domain.csproj",
+      "msbuildProject": "../Marketing.Domain/Marketing.Domain.csproj"
     },
     "Marketing.Infrastructure/1.0.0": {
       "type": "project",
@@ -5638,8 +5638,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj": {
-              "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj"
+            "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj": {
+              "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj"
             },
             "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Infrastructure\\Marketing.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Infrastructure\\Marketing.Infrastructure.csproj"

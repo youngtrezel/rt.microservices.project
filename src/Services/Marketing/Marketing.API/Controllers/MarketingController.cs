@@ -26,7 +26,7 @@ namespace Marketing.API.Controllers
         }
 
         [HttpGet]
-        [Route("getunreservedplates")]
+        [Route("getfilteredplates")]
         public ActionResult<IEnumerable<Plate>> GetFilteredPlates(string letters)
         {
             var results = _platesHandler.GetFilteredPlates(letters);

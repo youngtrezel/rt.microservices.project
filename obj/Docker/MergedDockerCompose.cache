@@ -4,26 +4,17 @@ services:
     build:
       context: C:\Users\wayne\source\repos\Applications\RT Project
       dockerfile: src/Services/Commercial/Commercial.API/Dockerfile
-    depends_on:
-      sqlserver:
-        condition: service_started
-        required: true
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "8080"
-      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: http://0.0.0.0:80
       ConnectionString: Server=sqlserver;Database=PlatesCommercial;User Id=sa;Password=Pass@word;encrypt=False
     image: commercialapi
     networks:
       default: null
     ports:
       - mode: ingress
-        target: 15680
+        target: 80
         published: "15680"
-        protocol: tcp
-      - mode: ingress
-        target: 5680
-        published: "5680"
         protocol: tcp
     volumes:
       - type: bind
@@ -42,26 +33,58 @@ services:
     build:
       context: C:\Users\wayne\source\repos\Applications\RT Project
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
-    depends_on:
-      sqlserver:
-        condition: service_started
-        required: true
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "8080"
-      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: http://0.0.0.0:80
       ConnectionString: Server=sqlserver;Database=PlatesMarketing;User Id=sa;Password=Pass@word;encrypt=False
     image: marketingapi
     networks:
       default: null
     ports:
       - mode: ingress
-        target: 15681
+        target: 80
         published: "15681"
         protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\wayne\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  rtapigateway:
+    build:
+      context: C:\Users\wayne\source\repos\Applications\RT Project
+      dockerfile: src/BuildingBlocks/ApiGateway/RTApiGateway/Dockerfile
+    depends_on:
+      commercial.api:
+        condition: service_started
+        required: true
+      marketing.api:
+        condition: service_started
+        required: true
+      sales.api:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://0.0.0.0:80
+    image: rtapigateway
+    networks:
+      default: null
+    ports:
       - mode: ingress
-        target: 5681
-        published: "5681"
+        target: 80
+        published: "15683"
+        protocol: tcp
+      - mode: ingress
+        target: 8081
         protocol: tcp
     volumes:
       - type: bind
@@ -80,26 +103,17 @@ services:
     build:
       context: C:\Users\wayne\source\repos\Applications\RT Project
       dockerfile: src/Services/Sales/Sales.API/Dockerfile
-    depends_on:
-      sqlserver:
-        condition: service_started
-        required: true
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "8080"
-      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: http://0.0.0.0:80
       ConnectionString: Server=sqlserver;Database=PlatesSales;User Id=sa;Password=Pass@word;encrypt=False
     image: salesapi
     networks:
       default: null
     ports:
       - mode: ingress
-        target: 15682
+        target: 80
         published: "15682"
-        protocol: tcp
-      - mode: ingress
-        target: 5682
-        published: "5682"
         protocol: tcp
     volumes:
       - type: bind

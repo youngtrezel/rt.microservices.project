@@ -10,11 +10,11 @@ namespace Commercial.Repository.Interfaces
 {
     public interface IPlateRepository
     {
-        public void AddPlate(PlateDto plate);
+        public bool AddPlate(PlateDto plate);
 
-        public Task<Plate> GetPlate(string registration);
+        public Plate GetPlate(string registration);
 
-        public Task<Plate> UpdatePlate(Plate plate);
+        public bool UpdatePlate(Plate plate);
 
         public Task<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize);
 

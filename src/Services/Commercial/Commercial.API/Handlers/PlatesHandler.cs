@@ -9,16 +9,14 @@ namespace Commercial.API.Handlers
     {
         private readonly IPlateRepository _plateRepository;
 
-
-
         public PlatesHandler(IPlateRepository plateRepository)
         {
             _plateRepository = plateRepository;
         }
 
-        public async Task<Plate> GetPlate(string registration)
+        public Plate GetPlate(string registration)
         {
-            return await _plateRepository.GetPlate(registration);
+            return _plateRepository.GetPlate(registration);
         }
 
         public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize)
@@ -42,16 +40,14 @@ namespace Commercial.API.Handlers
             return plates;
         }
 
-        public void AddPlate(PlateDto plate)
+        public bool AddPlate(PlateDto plate)
         {
-            _plateRepository.AddPlate(plate);
+            return _plateRepository.AddPlate(plate);
         }
 
-        public Plate UpdatePlate(Plate plate)
-        {
-            _plateRepository.UpdatePlate(plate); 
-            
-            return plate;
+        public bool UpdatePlate(Plate plate)
+        {                      
+            return _plateRepository.UpdatePlate(plate);
         }
 
         public Plate ReservePlate(Plate plate)

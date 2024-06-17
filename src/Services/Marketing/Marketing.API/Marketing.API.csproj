@@ -31,9 +31,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Marketing.Domain\Marketing.Domain.csproj" />
+    <ProjectReference Include="..\Marketing.Domain\Marketing.Domain.csproj" />
     <ProjectReference Include="..\Marketing.Infrastructure\Marketing.Infrastructure.csproj" />
     <ProjectReference Include="..\Marketing.Repository\Marketing.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Marketing.Domain">
+      <HintPath>..\Marketing.Domain\bin\Debug\net8.0\Marketing.Domain.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

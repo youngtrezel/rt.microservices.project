@@ -53,3 +53,17 @@ C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Sales.API.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Sales.Domain.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Sales.Repository.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Sales.Infrastructure.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.deps.json
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.runtimeconfig.json
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\ocelot.json
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.exe
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Ocelot.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\FluentValidation.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\IPAddressRange.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.pdb

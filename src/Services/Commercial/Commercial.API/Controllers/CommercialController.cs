@@ -18,10 +18,16 @@ namespace Commercial.API.Controllers
             _platesHandler = platesHandler;
         }
 
+        [HttpGet]
         [Route("getplate")]
-        public ActionResult<IEnumerable<Plate>> GetPlate(string registration)
+        public ActionResult<Plate> GetPlate(string registration)
         {
             var result = _platesHandler.GetPlate(registration);
+
+            if(result.Id == Guid.Empty)
+            {
+                return BadRequest();
+            }
 
             return Ok(JsonSerializer.Serialize(result));
         }
@@ -55,16 +61,18 @@ namespace Commercial.API.Controllers
 
         [HttpPost]
         [Route("addplate")]
-        public ActionResult AddPlate(PlateDto plate)
+        public ActionResult<Plate> AddPlate(PlateDto plate)
         {
-            _platesHandler.AddPlate(plate);
-
-            return Ok(JsonSerializer.Serialize(plate));
+            if (_platesHandler.AddPlate(plate))
+            {
+                return Ok(JsonSerializer.Serialize(plate));
+            }
+            return BadRequest();          
         }
 
         [HttpPut]
         [Route("updateplate")]
-        public ActionResult UpdatePlate(Plate plate)
+        public ActionResult<Plate> UpdatePlate(Plate plate)
         {
             var _plate = _platesHandler.UpdatePlate(plate);
 

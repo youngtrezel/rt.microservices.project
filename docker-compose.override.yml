@@ -4,16 +4,51 @@ services:
   commercial.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sqlserver;Database=PlatesCommercial;User Id=sa;Password=Pass@word;encrypt=False
     ports:
-      - "15680:15680"
-      - "5680:5680"
+      - "15680:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
 
+  marketing.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sqlserver;Database=PlatesMarketing;User Id=sa;Password=Pass@word;encrypt=False 
+    ports:
+      - "15681:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  sales.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sqlserver;Database=PlatesSales;User Id=sa;Password=Pass@word;encrypt=False 
+    ports:
+      - "15682:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+ 
+  rtapigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "15683:80"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    depends_on:
+      - marketing.api
+      - commercial.api
+      - sales.api
+ 
   sqlserver:
     container_name: sqlserver
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -23,33 +58,9 @@ services:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
 
-  marketing.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
-      - ConnectionString=Server=sqlserver;Database=PlatesMarketing;User Id=sa;Password=Pass@word;encrypt=False 
-    ports:
-      - "15681:15681"
-      - "5681:5681"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-
-  sales.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
-      - ConnectionString=Server=sqlserver;Database=PlatesSales;User Id=sa;Password=Pass@word;encrypt=False 
-    ports:
-      - "15682:15682"
-      - "5682:5682"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
 
 volumes:
   rt-sqlserver:
     external: false 
+
 

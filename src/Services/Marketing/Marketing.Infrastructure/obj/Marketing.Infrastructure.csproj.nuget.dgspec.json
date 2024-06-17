@@ -4,14 +4,14 @@
     "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Infrastructure\\Marketing.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj": {
+    "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj",
         "projectName": "Marketing.Domain",
-        "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj",
+        "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj",
         "packagesPath": "C:\\Users\\wayne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\obj\\",
+        "outputPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj": {
-                "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\Marketing.Domain\\Marketing.Domain.csproj"
+              "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj": {
+                "projectPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Marketing\\Marketing.Domain\\Marketing.Domain.csproj"
               }
             }
           }

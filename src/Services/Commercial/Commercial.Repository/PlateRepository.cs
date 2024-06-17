@@ -21,16 +21,43 @@ namespace Commercial.Repository
             return await _context.Plates.Where(p => p.Registration == registration && p.Reserved == false ).FirstAsync();
         }
 
-        public void AddPlate(PlateDto plate)
+        public bool AddPlate(PlateDto plate)
         {
-            _context.Plates.Add(PlateMapper.Map(plate));
+            Plate plateToAdd = PlateMapper.Map(plate);
+
+            _context.Plates.Add(plateToAdd);
             _context.SaveChanges();
 
+            var savedPlate = _context.Plates.Where(x => x.Id == plateToAdd.Id).FirstOrDefault();
+            
+            return savedPlate != null;
+
+        }
+        public bool UpdatePlate(Plate plate)
+        {
+            var updatePlate = _context.Plates.First(p => p.Id == plate.Id);
+            _context.Entry(updatePlate).CurrentValues.SetValues(plate);
+            _context.SaveChangesAsync();
+
+            var savedPlate = _context.Plates.Where(x => x.Id == updatePlate.Id).FirstOrDefault();
+
+            if (savedPlate == updatePlate)
+            {
+                return true;  
+            }
+
+            return false;
         }
 
-        public Task<Plate> GetPlate(string registration)
+        public Plate GetPlate(string registration)
         {
-            return _context.Plates.Where(x => x.Registration == registration && x.Reserved == false).FirstAsync();
+            Plate plate = _context.Plates.Where(x => x.Registration == registration).Select(x => x).FirstOrDefault();
+
+            if (plate == null)
+            {
+                return new Plate();
+            }
+            return plate;
         }
 
         public async Task<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize)
@@ -70,19 +97,7 @@ namespace Commercial.Repository
             return pagedResults;
         }
 
-        public async Task<Plate> UpdatePlate(Plate plate)
-        {
-            var updatePlate = _context.Plates.First(p => p.Id == plate.Id);
-            if (updatePlate != null)
-            {
-                _context.Entry(updatePlate).CurrentValues.SetValues(plate);
-                await _context.SaveChangesAsync();
 
-                return updatePlate;
-            }
-
-            return plate;
-        }
 
         
     }

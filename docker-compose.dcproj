@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>98a5a470-1294-40c1-9962-57f4a2948b32</ProjectGuid>
+    <ProjectGuid>ccc0f3b8-17a3-4224-8902-37d14e480ca0</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>commercial.api</DockerServiceName>

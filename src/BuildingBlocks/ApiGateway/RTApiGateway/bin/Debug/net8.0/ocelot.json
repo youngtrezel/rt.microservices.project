@@ -1,0 +1,51 @@
+{
+  "Routes": [
+
+    {
+      "DownstreamPathTemplate": "/api/Commercial/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "commercial.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/commercial/{everything}",
+      "UpstreamScheme": "http",
+      "UpstreamHttpMethod": [ "Get", "Put", "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Marketing/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "marketing.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/marketing/{everything}",
+      "UpstreamScheme": "http",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Sales/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales.sales",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/sales/{everything}",
+      "UpstreamScheme": "http",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:15683"
+  }
+
+}
