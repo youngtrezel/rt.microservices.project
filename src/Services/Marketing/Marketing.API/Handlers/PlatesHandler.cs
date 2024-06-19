@@ -9,13 +9,27 @@ namespace Marketing.API.Handlers
     {
         private readonly IPlateRepository _plateRepository;
 
-
-
         public PlatesHandler(IPlateRepository plateRepository)
         {
             _plateRepository = plateRepository;
         }
 
+        public async Task<Plate?> SellPlate(string registration)
+        {
+            var plate = await _plateRepository.GetPlate(registration);
+
+            if(plate == null)
+            {
+                var emptyPlate = new Plate();
+                return emptyPlate;
+            }
+
+            plate.Sold = true;
+
+            await _plateRepository.UpdatePlate(plate);
+
+            return plate;
+        }
 
         public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize)
         {
@@ -24,9 +38,9 @@ namespace Marketing.API.Handlers
             return plates;
         }
 
-        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters)
+        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize)
         {
-            var plates = await _plateRepository.GetFilteredPlates(letters);
+            var plates = await _plateRepository.GetFilteredPlates(letters, pageNumber, pageSize);
 
             return plates;
         }

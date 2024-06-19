@@ -16,11 +16,26 @@ namespace Marketing.Repository
             _context = context;
         }
 
-        public void AddPlate(PlateDto plate)
+        public async Task<Plate?> GetPlate(string registration)
         {
-            _context.Plates.Add(PlateMapper.Map(plate));
-            _context.SaveChanges();
+            return await _context.Plates.Where(x => x.Registration == registration).Select(x => x).FirstOrDefaultAsync();
+        }
 
+
+        public async Task<Plate?> UpdatePlate(Plate plate)
+        {
+            var updatePlate = await _context.Plates.FirstAsync(p => p.Id == plate.Id);
+            _context.Entry(updatePlate).CurrentValues.SetValues(plate);
+            await _context.SaveChangesAsync();
+
+            var savedPlate = await _context.Plates.Where(x => x.Id == updatePlate.Id).FirstOrDefaultAsync();
+
+            if (savedPlate == updatePlate)
+            {
+                return savedPlate;
+            }
+
+            return plate;
         }
 
         public async Task<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize)
@@ -34,7 +49,7 @@ namespace Marketing.Repository
             return plates;
         }
 
-        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters)
+        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize)
         {
             IEnumerable<Plate> plates = [];
 
@@ -45,15 +60,19 @@ namespace Marketing.Repository
                 if (int.TryParse(letters, out num))
                 {
                     plates = await _context.Plates.AsNoTracking()
-                        .Where(x => num == x.Numbers)
+                        .Where(x => x.Numbers.ToString().Contains(letters))
                         .OrderByDescending(x => x.SalePrice)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize)
                         .ToListAsync();
                 }
                 else
                 {
                     plates = await _context.Plates.AsNoTracking()
-                        .Where(x => letters == x.Letters)
+                        .Where(x => x.Letters.Contains(letters))
                         .OrderByDescending(x => x.SalePrice)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize)
                         .ToListAsync();
                 }
             }

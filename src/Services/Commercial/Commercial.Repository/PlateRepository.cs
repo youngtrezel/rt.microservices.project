@@ -16,47 +16,39 @@ namespace Commercial.Repository
             _context = context;
         }
 
+        public async Task<Plate?> GetPlate(string registration)
+        {
+            return await _context.Plates.Where(x => x.Registration == registration).Select(x => x).FirstOrDefaultAsync();
+        }
+
         public async Task<Plate> GetUnreservedPlate(string registration)
         {
             return await _context.Plates.Where(p => p.Registration == registration && p.Reserved == false ).FirstAsync();
         }
 
-        public bool AddPlate(PlateDto plate)
+        public async Task<Plate?> AddPlate(PlateDto plate)
         {
             Plate plateToAdd = PlateMapper.Map(plate);
 
-            _context.Plates.Add(plateToAdd);
-            _context.SaveChanges();
+            await _context.Plates.AddAsync(plateToAdd);
+            await _context.SaveChangesAsync();
 
-            var savedPlate = _context.Plates.Where(x => x.Id == plateToAdd.Id).FirstOrDefault();
-            
-            return savedPlate != null;
+            return _context.Plates.Where(x => x.Id == plateToAdd.Id).FirstOrDefaultAsync().Result;
 
         }
-        public bool UpdatePlate(Plate plate)
+        public async Task<Plate?> UpdatePlate(Plate plate)
         {
-            var updatePlate = _context.Plates.First(p => p.Id == plate.Id);
+            var updatePlate = await _context.Plates.FirstAsync(p => p.Id == plate.Id);
             _context.Entry(updatePlate).CurrentValues.SetValues(plate);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-            var savedPlate = _context.Plates.Where(x => x.Id == updatePlate.Id).FirstOrDefault();
+            var savedPlate = await _context.Plates.Where(x => x.Id == updatePlate.Id).FirstOrDefaultAsync();
 
             if (savedPlate == updatePlate)
             {
-                return true;  
+                return savedPlate; 
             }
 
-            return false;
-        }
-
-        public Plate GetPlate(string registration)
-        {
-            Plate plate = _context.Plates.Where(x => x.Registration == registration).Select(x => x).FirstOrDefault();
-
-            if (plate == null)
-            {
-                return new Plate();
-            }
             return plate;
         }
 
@@ -96,9 +88,5 @@ namespace Commercial.Repository
 
             return pagedResults;
         }
-
-
-
-        
     }
 }

@@ -18,3 +18,5 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Comm
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Repository\obj\Debug\net8.0\ref\Commercial.Repository.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Repository\bin\Debug\net8.0\Commercial.Infrastructure.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Repository\bin\Debug\net8.0\Commercial.Infrastructure.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Repository\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Repository\bin\Debug\net8.0\EventBus.pdb

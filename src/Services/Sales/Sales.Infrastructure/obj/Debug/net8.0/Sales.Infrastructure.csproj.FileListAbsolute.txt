@@ -16,3 +16,5 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Inf
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Infrastructure\obj\Debug\net8.0\Sales.Infrastructure.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Infrastructure\obj\Debug\net8.0\Sales.Infrastructure.genruntimeconfig.cache
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Infrastructure\obj\Debug\net8.0\ref\Sales.Infrastructure.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Infrastructure\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Infrastructure\bin\Debug\net8.0\EventBus.pdb

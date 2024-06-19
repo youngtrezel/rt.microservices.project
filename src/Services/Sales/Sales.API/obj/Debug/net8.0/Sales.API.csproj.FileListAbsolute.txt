@@ -159,3 +159,9 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\obj\Debug\net8.0\Sales.API.genruntimeconfig.cache
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\obj\Debug\net8.0\ref\Sales.API.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\obj\Debug\net8.0\Sales.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\MassTransit.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.API\bin\Debug\net8.0\EventBus.pdb

@@ -3,6 +3,7 @@ using Sales.API.Handlers;
 using Sales.API.Interfaces;
 using Sales.API.Setup;
 using Sales.Infrastructure.Data;
+using Sales.Infrastructure.Configurations;
 using Sales.Repository.Interfaces;
 using Sales.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,7 @@ var logger = new LoggerConfiguration()
 
 Log.Logger = logger;
 
+builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -37,7 +39,7 @@ ConfigurationHelper.Initialize(builder.Configuration);
 var connectionstring = ConfigurationHelper.config.GetSection("ConnectionString").Value;
 
 Log.Information("Configuring database ({ApplicationContext})...", name);
-builder.Services.AddScoped<DbContext, ApplicationDbContext>();
+builder.Services.AddTransient<DbContext, ApplicationDbContext>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options
     => options.UseSqlServer(connectionstring, sqlServerOptionsAction: sqlOptions =>

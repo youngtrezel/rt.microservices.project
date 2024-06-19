@@ -24,5 +24,6 @@ namespace Sales.API.Controllers
 
             return Ok(JsonSerializer.Serialize(results));
         }
+
     }
 }

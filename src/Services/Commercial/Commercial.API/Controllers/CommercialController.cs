@@ -1,6 +1,9 @@
 ﻿using Commercial.API.Interfaces;
 using Commercial.Domain.Models;
 using Commercial.Domain.Models.Data;
+using EventBus.Events;
+using EventBus.Events.Interfaces;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -12,17 +15,22 @@ namespace Commercial.API.Controllers
     {
 
         private readonly IPlatesHandler _platesHandler;
+        private readonly IPublishEndpoint _publishEndpoint;
+        private readonly ILogger _logger;
 
-        public CommercialController(IPlatesHandler platesHandler)
+        public CommercialController(IPlatesHandler platesHandler, IPublishEndpoint publishEndpoint, ILogger<CommercialController> logger)
         {
             _platesHandler = platesHandler;
+            _publishEndpoint = publishEndpoint;
+            _logger = logger;
         }
 
         [HttpGet]
         [Route("getplate")]
-        public ActionResult<Plate> GetPlate(string registration)
+        public async Task<ActionResult<Plate>> GetPlate(string registration)
         {
-            var result = _platesHandler.GetPlate(registration);
+
+            var result = await _platesHandler.GetPlate(registration);
 
             if(result.Id == Guid.Empty)
             {
@@ -61,31 +69,76 @@ namespace Commercial.API.Controllers
 
         [HttpPost]
         [Route("addplate")]
-        public ActionResult<Plate> AddPlate(PlateDto plate)
+        public async Task<ActionResult<Plate>> AddPlate(PlateDto plate)
         {
-            if (_platesHandler.AddPlate(plate))
+            var _plate = await _platesHandler.AddPlate(plate);
+            if (_plate != null)
             {
+                await _publishEndpoint.Publish(new PlateAddedEvent
+                {
+                    Id = _plate.Id,
+                    SalePrice = _plate.SalePrice,
+                    DateSold = _plate.DateSold,
+                    Sold = _plate.Sold,
+                    PriceSoldFor = _plate.PriceSoldFor,
+                    PurchasePrice = _plate.PurchasePrice,
+                    Letters = _plate.Letters,
+                    Numbers = _plate.Numbers,
+                    Reserved = _plate.Reserved,
+                    Registration = _plate.Registration
+                });
+
                 return Ok(JsonSerializer.Serialize(plate));
             }
             return BadRequest();          
         }
 
         [HttpPut]
-        [Route("updateplate")]
-        public ActionResult<Plate> UpdatePlate(Plate plate)
+        [Route("reserveplate")]
+        public async Task<ActionResult> ReservePlate(string registration)
         {
-            var _plate = _platesHandler.UpdatePlate(plate);
+            var _plate = await _platesHandler.ReservePlate(registration);
 
-            return Ok(JsonSerializer.Serialize(_plate));
+            if( _plate.Reserved == true )
+            {
+                await _publishEndpoint.Publish(new PlateReservedEvent
+                {
+                    Id = _plate.Id
+                }); ;
+
+                return Ok(JsonSerializer.Serialize(_plate));
+            }
+
+            return StatusCode(501);
         }
 
         [HttpPut]
-        [Route("reserveplate")]
-        public ActionResult ReservePlate(Plate plate)
+        [Route("unreserveplate")]
+        public async Task<ActionResult> UnreservePlate(string registration)
         {
-            var _plate = _platesHandler.ReservePlate(plate);
+            var _plate = await _platesHandler.UnreservePlate(registration);
 
-            return Ok(JsonSerializer.Serialize(_plate));
+            if (_plate.Reserved == false)
+            {
+                await _publishEndpoint.Publish(new PlateUnreservedEvent
+                {
+                    Id = _plate.Id
+                });
+            
+                return Ok(JsonSerializer.Serialize(_plate));
+            }
+
+            return StatusCode(501);
         }
+
+        //[HttpPut]
+        //[Route("updateplate")]
+        //public ActionResult<Plate> UpdatePlate(Plate plate)
+        //{
+        //    var _plate = _platesHandler.UpdatePlate(plate);
+
+        //    return Ok(JsonSerializer.Serialize(_plate));
+        //}
+
     }
 }

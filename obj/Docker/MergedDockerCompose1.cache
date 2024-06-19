@@ -212,6 +212,19 @@ services:
         read_only: true
         bind:
           create_host_path: true
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
   rtapigateway:
     build:
       context: C:\Users\wayne\source\repos\Applications\RT Project

@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Events;
+using Commercial.Infrastructure.Configurations;
+
 
 var builder = WebApplication.CreateBuilder(args);
 string name = typeof(Program).Assembly.GetName().Name;
@@ -29,6 +31,7 @@ var logger = new LoggerConfiguration()
 
 Log.Logger = logger;
 
+builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -37,7 +40,7 @@ ConfigurationHelper.Initialize(builder.Configuration);
 var connectionstring = ConfigurationHelper.config.GetSection("ConnectionString").Value;
 
 Log.Information("Configuring database ({ApplicationContext})...", name);
-builder.Services.AddScoped<DbContext, ApplicationDbContext>();
+builder.Services.AddTransient<DbContext, ApplicationDbContext>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options
     => options.UseSqlServer(connectionstring, sqlServerOptionsAction: sqlOptions =>
@@ -47,7 +50,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options
     }));
 
 builder.Services.AddScoped<IPlatesHandler, PlatesHandler>();
-builder.Services.AddScoped<IPlateRepository, PlateRepository>(); 
+builder.Services.AddScoped<IPlateRepository, PlateRepository>();
+
+
 
 var app = builder.Build();
 

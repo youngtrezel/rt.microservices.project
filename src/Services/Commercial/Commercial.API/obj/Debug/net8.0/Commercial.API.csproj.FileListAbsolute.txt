@@ -159,3 +159,9 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Comm
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\MassTransit.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.API\bin\Debug\net8.0\EventBus.pdb

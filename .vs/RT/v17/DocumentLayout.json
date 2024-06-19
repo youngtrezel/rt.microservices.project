@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81996E16-F086-4A85-A02B-D68820CF18F4}|src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\RTApiGateway.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\buildingblocks\\apigateway\\rtapigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81996E16-F086-4A85-A02B-D68820CF18F4}|src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\RTApiGateway.csproj|solutionrelative:src\\buildingblocks\\apigateway\\rtapigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.infrastructure\\configurations\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|solutionrelative:src\\services\\commercial\\commercial.infrastructure\\configurations\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.infrastructure\\configurations\\configurationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|solutionrelative:src\\services\\commercial\\commercial.infrastructure\\configurations\\configurationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81996E16-F086-4A85-A02B-D68820CF18F4}|src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\RTApiGateway.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\buildingblocks\\apigateway\\rtapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{81996E16-F086-4A85-A02B-D68820CF18F4}|src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\RTApiGateway.csproj|solutionrelative:src\\buildingblocks\\apigateway\\rtapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 388,
+          "DockedWidth": 312,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -38,41 +38,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\Program.cs",
-              "RelativeDocumentMoniker": "src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\Program.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\Program.cs",
-              "RelativeToolTip": "src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Program.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Program.cs",
+              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:55:47.821Z",
+              "WhenOpened": "2024-06-19T14:05:57.806Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 686,
+          "SelectedChildIndex": 1,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "docker-compose.override.yml",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.override.yml",
-              "RelativeDocumentMoniker": "docker-compose.override.yml",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.override.yml",
-              "RelativeToolTip": "docker-compose.override.yml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-06-17T04:52:03.393Z",
+              "Title": "ConfigurationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
+              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T14:14:59.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ocelot.json",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\ocelot.json",
-              "RelativeDocumentMoniker": "src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\ocelot.json",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\ocelot.json",
-              "RelativeToolTip": "src\\BuildingBlocks\\ApiGateway\\RTApiGateway\\ocelot.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-17T04:43:45.06Z",
+              "DocumentIndex": 0,
+              "Title": "ConfigureServices.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
+              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T14:05:38.627Z",
               "EditorCaption": ""
             }
           ]

@@ -16,3 +16,5 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Rep
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Repository\obj\Debug\net8.0\refint\Sales.Repository.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Repository\obj\Debug\net8.0\Sales.Repository.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Repository\obj\Debug\net8.0\ref\Sales.Repository.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Repository\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Sales\Sales.Repository\bin\Debug\net8.0\EventBus.pdb

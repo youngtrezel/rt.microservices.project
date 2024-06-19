@@ -16,3 +16,5 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Comm
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Infrastructure\obj\Debug\net8.0\ref\Commercial.Infrastructure.dll
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Infrastructure\bin\Debug\net8.0\Commercial.Infrastructure.runtimeconfig.json
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Infrastructure\obj\Debug\net8.0\Commercial.Infrastructure.genruntimeconfig.cache
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Infrastructure\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Commercial\Commercial.Infrastructure\bin\Debug\net8.0\EventBus.pdb

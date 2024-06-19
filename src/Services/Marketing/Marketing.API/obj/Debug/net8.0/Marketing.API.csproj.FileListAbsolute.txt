@@ -159,3 +159,9 @@ C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marke
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\obj\Debug\net8.0\Marketing.API.pdb
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\obj\Debug\net8.0\Marketing.API.genruntimeconfig.cache
 C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\obj\Debug\net8.0\ref\Marketing.API.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\MassTransit.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\src\Services\Marketing\Marketing.API\bin\Debug\net8.0\EventBus.pdb

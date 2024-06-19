@@ -67,3 +67,9 @@ C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.AspNetCo
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\Newtonsoft.Json.Bson.dll
 C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RTApiGateway.pdb
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\MassTransit.Abstractions.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\EventBus.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\MassTransit.RabbitMqTransport.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\MassTransit.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\RabbitMQ.Client.dll
+C:\Users\wayne\source\repos\Applications\RT Project\bin\Debug\EventBus.pdb

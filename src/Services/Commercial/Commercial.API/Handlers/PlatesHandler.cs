@@ -14,9 +14,9 @@ namespace Commercial.API.Handlers
             _plateRepository = plateRepository;
         }
 
-        public Plate GetPlate(string registration)
+        public async Task<Plate> GetPlate(string registration)
         {
-            return _plateRepository.GetPlate(registration);
+            return await _plateRepository.GetPlate(registration);
         }
 
         public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize)
@@ -40,20 +40,47 @@ namespace Commercial.API.Handlers
             return plates;
         }
 
-        public bool AddPlate(PlateDto plate)
+        public async Task<Plate?> AddPlate(PlateDto plate)
         {
-            return _plateRepository.AddPlate(plate);
+            return await _plateRepository.AddPlate(plate);
         }
 
-        public bool UpdatePlate(Plate plate)
+        public async Task<Plate?> UpdatePlate(Plate plate)
         {                      
-            return _plateRepository.UpdatePlate(plate);
+            return await _plateRepository.UpdatePlate(plate);
         }
 
-        public Plate ReservePlate(Plate plate)
+        public async Task<Plate?> ReservePlate(string registration)
         {
+            var plate = await _plateRepository.GetPlate(registration);
+
+            if(plate == null)
+            {
+                var emptyPlate = new Plate();
+                return emptyPlate;
+            }
+
             plate.Reserved = true;
-            _plateRepository.UpdatePlate(plate);
+
+            await _plateRepository.UpdatePlate(plate);
+
+            return plate;
+        }
+
+        public async Task<Plate?> UnreservePlate(string registration)
+        {
+            var plate = await _plateRepository.GetPlate(registration);
+
+            if (plate == null)
+            {
+                var emptyPlate = new Plate();
+                emptyPlate.Reserved = true;
+                return emptyPlate;
+            }
+
+            plate.Reserved = false;
+
+            await _plateRepository.UpdatePlate(plate);
 
             return plate;
         }
