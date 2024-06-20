@@ -1,0 +1,75 @@
+<div class="block">
+    <h1 class="subtitle centered is-1">Marketing Admin</h1>
+</div>
+
+<div class="block">
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="block">
+                <h2 class="subtitle is-4">Sell Plate</h2>
+            </div>
+            <div class="box">
+                <form [formGroup]="plateForm" (submit)="sellPlate()" method="POST">
+                    <div class="field">
+                        <label class="label">
+                            <h1 class="subtitle is-5">Registration</h1>
+                        </label>
+                        <div class="control">
+                            <input class="input" name="Registration" type="text" formControlName="Registration">
+                        </div>
+                        <div class="control notification is-danger"
+                            *ngIf="plateForm.get('Registration')?.errors?.['plateForm'] && plateForm.get('Registration')?.touched">
+                            <label class="label"> A registration required.</label>
+                        </div>
+                    </div>                   
+                    <button class="button is-dark spread" type="submit" [disabled]="plateForm.invalid">SUBMIT</button>
+                </form>
+            </div>
+            <div class="box">
+                <form [formGroup]="plateForm2" (submit)="applyDiscount()" method="POST">
+                    <div class="field">
+                        <label class="label">
+                            <h1 class="subtitle is-5">Registration</h1>
+                        </label>
+                        <div class="control">
+                            <input class="input" name="Registration2" type="text" formControlName="Registration2">
+                        </div>
+                        <div class="control notification is-danger"
+                            *ngIf="plateForm.get('Registration2')?.errors?.['plateForm2'] && plateForm2.get('Registration2')?.touched">
+                            <label class="label"> A registration required.</label>
+                        </div>
+                    </div>                   
+                    <button class="button is-dark spread" type="submit" [disabled]="plateForm2.invalid">SUBMIT</button>
+                </form>
+            </div>
+            <div class="box">
+                <form [formGroup]="plateForm3" (submit)="applyMoneyOff()" method="POST">
+                    <div class="field">
+                        <label class="label">
+                            <h1 class="subtitle is-5">Registration</h1>
+                        </label>
+                        <div class="control">
+                            <input class="input" name="Registration3" type="text" formControlName="Registration3">
+                        </div>
+                        <div class="control notification is-danger"
+                            *ngIf="plateForm.get('Registration3')?.errors?.['plateForm3'] && plateForm2.get('Registration3')?.touched">
+                            <label class="label"> A registration required.</label>
+                        </div>
+                    </div>                   
+                    <button class="button is-dark spread" type="submit" [disabled]="plateForm3.invalid">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        <div class="column is-two-thirds">
+            <div class="block">
+                <h2 class="subtitle is-4">Plate Prices</h2>
+            </div>
+            <div class="box">
+                <div class="block">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -2,7 +2,6 @@
 using Commercial.Domain.Models;
 using Commercial.Domain.Models.Data;
 using EventBus.Events;
-using EventBus.Events.Interfaces;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -29,7 +28,6 @@ namespace Commercial.API.Controllers
         [Route("getplate")]
         public async Task<ActionResult<Plate>> GetPlate(string registration)
         {
-
             var result = await _platesHandler.GetPlate(registration);
 
             if(result.Id == Guid.Empty)
@@ -88,12 +86,15 @@ namespace Commercial.API.Controllers
                     Registration = _plate.Registration
                 });
 
+                _logger.LogInformation($"Plate added with registration {_plate.Registration} at {DateTime.Now}");
+                _logger.LogInformation($"Event raised to update Commercial and Sales db's with added plate, registration {_plate.Registration}");
+
                 return Ok(JsonSerializer.Serialize(plate));
             }
             return BadRequest();          
         }
 
-        [HttpPut]
+        [HttpGet]
         [Route("reserveplate")]
         public async Task<ActionResult> ReservePlate(string registration)
         {
@@ -106,13 +107,24 @@ namespace Commercial.API.Controllers
                     Id = _plate.Id
                 }); ;
 
+                _logger.LogInformation($"Plate reserved with registration {_plate.Registration} at {DateTime.Now}");
+                _logger.LogInformation($"Event raised to update Marketing and Sales db's with reserved plate, registration {_plate.Registration}");
                 return Ok(JsonSerializer.Serialize(_plate));
             }
 
             return StatusCode(501);
         }
 
-        [HttpPut]
+        [HttpGet]
+        [Route("filteredunsold")]
+        public async Task<ActionResult> GetFilteredUnsoldPlates(string letters, int pageNumber, int pageSize)
+        {
+            var result = _platesHandler.GetFilteredUnsold(letters, pageNumber, pageSize);
+
+            return Ok(JsonSerializer.Serialize(result));
+        }
+
+        [HttpGet]
         [Route("unreserveplate")]
         public async Task<ActionResult> UnreservePlate(string registration)
         {
@@ -124,21 +136,22 @@ namespace Commercial.API.Controllers
                 {
                     Id = _plate.Id
                 });
-            
+
+                _logger.LogInformation($"Plate unreserved with registration {_plate.Registration} at {DateTime.Now}");
+                _logger.LogInformation($"Event raised to update Marketing and Sales db's with unreserved plate, registration {_plate.Registration}");
                 return Ok(JsonSerializer.Serialize(_plate));
             }
 
             return StatusCode(501);
         }
 
-        //[HttpPut]
-        //[Route("updateplate")]
-        //public ActionResult<Plate> UpdatePlate(Plate plate)
-        //{
-        //    var _plate = _platesHandler.UpdatePlate(plate);
+        [HttpGet]
+        [Route("platecount")]
+        public async Task<ActionResult<int>> PlateCount(string filter)
+        {
+            var count = await _platesHandler.GetAvailablePlateCount(filter);
 
-        //    return Ok(JsonSerializer.Serialize(_plate));
-        //}
-
+            return Ok(count);
+        }
     }
 }

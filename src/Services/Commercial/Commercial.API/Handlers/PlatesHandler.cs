@@ -84,5 +84,15 @@ namespace Commercial.API.Handlers
 
             return plate;
         }
+
+        public async Task<int> GetAvailablePlateCount(string filter)
+        {
+            return await _plateRepository.GetAvailablePlateCount(filter);
+        }
+
+        public async Task<IEnumerable<Plate>> GetFilteredUnsold(string letters, int pageNumber, int pageSize)
+        {
+            return await _plateRepository.GetFilteredUnsold(letters, pageNumber, pageSize);
+        }
     }
 }

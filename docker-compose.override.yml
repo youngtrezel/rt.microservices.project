@@ -64,8 +64,10 @@ services:
       - "5672:5672"
 
 
+
 volumes:
   rt-sqlserver:
     external: false 
     
+
 

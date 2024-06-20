@@ -1,0 +1,48 @@
+<div class="block">
+    <h1 class="subtitle centered is-1">Marketing Admin</h1>
+</div>
+
+
+<div class="block">
+    <h2 class="subtitle is-4">Plate Prices</h2>
+</div>
+<div class="box">
+    <div class="block">
+        <div class="data-list">
+            <div class="block">
+                @if(populated) {
+                <table class="table is-fullwidth is-narrow is-striped">
+                    <thead>
+                        <tr>
+                            <th>Registration</th>
+                            <th>Purchase Price</th>
+                            <th>Sale Price</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Registration</th>
+                            <th>Purchase Price</th>
+                            <th>Sale Price</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @for(record of pagedResults; track $index) {
+                        <tr>
+                            <td>{{record.Registration}}</td>
+                            <td>£ {{record.PurchasePrice | currency: 'GBP' }}</td>
+                            <td>£ {{record.SalePrice| currency: 'GBP' }}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                }
+            </div>
+
+            @if(populated) {
+            <app-pagination [totalItems]="plateCount" [itemsPerPage]="itemsPerPage"
+                [currentPage]="currentPage" (onClick)="onPageChange($event)"></app-pagination>
+            }
+        </div>
+    </div>
+</div>

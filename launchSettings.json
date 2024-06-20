@@ -7,7 +7,8 @@
         "commercial.api": "StartDebugging",
         "marketing.api": "StartDebugging",
         "sales.api": "StartDebugging",
-        "rtapigateway": "StartDebugging"
+        "rtapigateway": "StartDebugging",
+        "web.frontend.server": "StartDebugging"
       }
     }
   }

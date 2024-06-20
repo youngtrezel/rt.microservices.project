@@ -2,7 +2,6 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
-
 new WebHostBuilder()
             .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
@@ -17,6 +16,15 @@ new WebHostBuilder()
             .ConfigureServices(s =>
             {
                 s.AddOcelot();
+
+                s.AddCors(options =>
+                {
+                    options.AddPolicy("AllowSpecificOrigin",
+                        builder => builder.WithOrigins(["http://localhost:4200"])
+                                            .AllowAnyMethod()
+                                            .AllowAnyHeader());
+                });
+
             })
             .ConfigureLogging((hostingContext, logging) =>
             {
@@ -25,6 +33,7 @@ new WebHostBuilder()
             .UseIISIntegration()
             .Configure(app =>
             {
+                app.UseCors("AllowSpecificOrigin");
                 app.UseOcelot().Wait();
             })
             .Build()

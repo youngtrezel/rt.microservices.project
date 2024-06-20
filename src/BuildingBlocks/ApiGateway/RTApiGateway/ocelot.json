@@ -34,7 +34,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "sales.sales",
+          "Host": "sales.api",
           "Port": 80
         }
       ],

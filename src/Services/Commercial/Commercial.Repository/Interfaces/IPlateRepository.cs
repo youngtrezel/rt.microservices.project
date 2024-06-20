@@ -16,5 +16,9 @@ namespace Commercial.Repository.Interfaces
         public Task<IEnumerable<Plate>> GetUnreservedPlates(int pageNumber, int pageSize);
 
         public Task<IEnumerable<Plate>> GetUnsoldPlates(int pageNumber, int pageSize);
+
+        public Task<int> GetAvailablePlateCount(string filter);
+
+        public Task<IEnumerable<Plate>> GetFilteredUnsold(string letters, int pageNumber, int pageSize);
     }
 }

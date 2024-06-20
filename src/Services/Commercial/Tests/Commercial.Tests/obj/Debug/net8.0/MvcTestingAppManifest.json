@@ -1,0 +1,7 @@
+{
+  "Commercial.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API",
+  "Commercial.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Domain",
+  "Commercial.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure",
+  "Commercial.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Repository",
+  "EventBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\BuildingBlocks\\EventBus\\EventBus"
+}

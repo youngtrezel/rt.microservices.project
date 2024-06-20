@@ -13,13 +13,11 @@ services:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
 
-
   sales.api:
     image: ${DOCKER_REGISTRY-}salesapi
     build:
       context: .
       dockerfile: src/Services/Sales/Sales.API/Dockerfile
-
 
   rtapigateway:
     image: ${DOCKER_REGISTRY-}rtapigateway
@@ -29,4 +27,7 @@ services:
 
   rabbitmq:
     image: rabbitmq:3.13-management
+
+
+
 

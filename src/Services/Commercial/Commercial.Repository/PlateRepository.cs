@@ -4,12 +4,14 @@ using Commercial.Domain.Models.Data;
 using Commercial.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Commercial.Infrastructure.Data;
+using System.Linq.Expressions;
 
 namespace Commercial.Repository
 {
     public class PlateRepository : IPlateRepository
     {
         private readonly ApplicationDbContext _context;
+
 
         public PlateRepository(ApplicationDbContext context)
         {
@@ -54,18 +56,20 @@ namespace Commercial.Repository
 
         public async Task<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize)
         {
-            var plates = await _context.Plates.AsNoTracking()
-                .OrderBy(x => x.Id)
+            var platesFiltered = await _context.Plates.Where(x => x.Sold == false)
+                .Select(t => t).ToListAsync();
+
+            var pagedResults = platesFiltered
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
-                .ToListAsync();
+                .ToList();
 
-            return plates;
+            return pagedResults;
         }
 
         public async Task<IEnumerable<Plate>> GetUnreservedPlates(int pageNumber, int pageSize)
         {
-            var platesFiltered = await _context.Plates.Where(x => x.Reserved == false)
+            var platesFiltered = await _context.Plates.Where(x => x.Reserved == false && x.Sold == false)
                 .Select(t => t).ToListAsync();
                 
             var pagedResults = platesFiltered
@@ -87,6 +91,53 @@ namespace Commercial.Repository
                 .ToList();
 
             return pagedResults;
+        }
+
+        public async Task<IEnumerable<Plate>> GetFilteredUnsold(string letters, int pageNumber, int pageSize)
+        {
+            IEnumerable<Plate> plates = [];
+
+            if (!string.IsNullOrEmpty(letters))
+            {
+                int num;
+
+                if (int.TryParse(letters, out num))
+                {
+                    plates = await _context.Plates.AsNoTracking()
+                        .Where(x => x.Numbers.ToString().Contains(letters) && x.Sold == false)
+                        .OrderByDescending(x => x.SalePrice)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize)
+                        .ToListAsync();
+                }
+                else
+                {
+                    plates = await _context.Plates.AsNoTracking()
+                        .Where(x => x.Letters.Contains(letters) && x.Sold == false)
+                        .OrderByDescending(x => x.SalePrice)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize)
+                        .ToListAsync();
+                }
+            }
+
+            return plates;
+        }
+
+        public async Task<int> GetAvailablePlateCount(string filter)
+        {
+            switch (filter)
+            {
+                case "unreserved":
+                    return await _context.Plates.Where(p => p.Sold == false && p.Reserved == false).CountAsync();
+                    break;
+                case "unsold":
+                    return await _context.Plates.Where(p => p.Sold == false ).CountAsync();
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
         }
     }
 }

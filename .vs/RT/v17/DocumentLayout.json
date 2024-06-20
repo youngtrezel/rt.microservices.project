@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.infrastructure\\configurations\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|solutionrelative:src\\services\\commercial\\commercial.infrastructure\\configurations\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12461745-C938-42D3-92EF-6853B2E2AD04}|src\\Web\\Web.Spa\\Web.Spa.esproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\web\\web.spa\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{12461745-C938-42D3-92EF-6853B2E2AD04}|src\\Web\\Web.Spa\\Web.Spa.esproj|solutionrelative:src\\web\\web.spa\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.infrastructure\\configurations\\configurationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D719F5B0-D0BD-45EE-BEFC-3F11067E6C06}|src\\Services\\Commercial\\Commercial.Infrastructure\\Commercial.Infrastructure.csproj|solutionrelative:src\\services\\commercial\\commercial.infrastructure\\configurations\\configurationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578}|src\\Services\\Commercial\\Tests\\Commercial.Tests\\Commercial.Tests.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\tests\\commercial.tests\\handlertests\\platehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578}|src\\Services\\Commercial\\Tests\\Commercial.Tests\\Commercial.Tests.csproj|solutionrelative:src\\services\\commercial\\tests\\commercial.tests\\handlertests\\platehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 312,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 669,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,47 +46,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Program.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Program.cs",
-              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:05:57.806Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 686,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConfigurationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
-              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigurationHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:14:59.43Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-20T07:23:17.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConfigureServices.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
-              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.Infrastructure\\Configurations\\ConfigureServices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAtAAAA",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Web\\Web.Spa\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Web\\Web.Spa\\Dockerfile",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Web\\Web.Spa\\Dockerfile",
+              "RelativeToolTip": "src\\Web\\Web.Spa\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-20T07:23:08.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-06-20T07:21:12.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlateHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
+              "RelativeToolTip": "src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:05:38.627Z",
+              "WhenOpened": "2024-06-20T06:40:52.354Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 603,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlatesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
+              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAYwBUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T06:43:07.933Z",
               "EditorCaption": ""
             }
           ]

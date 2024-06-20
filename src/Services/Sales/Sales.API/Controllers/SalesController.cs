@@ -11,6 +11,7 @@ namespace Sales.API.Controllers
     public class SalesController : ControllerBase
     {
         private readonly IPlatesHandler _platesHandler;
+
         public SalesController(IPlatesHandler platesHandler)
         {
             _platesHandler = platesHandler;

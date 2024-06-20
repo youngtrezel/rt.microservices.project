@@ -13,11 +13,13 @@ namespace Marketing.API.Controllers
     {
         private readonly IPlatesHandler _platesHandler;
         private readonly IPublishEndpoint _publishEndpoint;
+        private readonly ILogger _logger;
 
-        public MarketingController(IPlatesHandler platesHandler, IPublishEndpoint publishEndpoint)
+        public MarketingController(IPlatesHandler platesHandler, IPublishEndpoint publishEndpoint, ILogger<MarketingController> logger)
         {
             _platesHandler = platesHandler;
             _publishEndpoint = publishEndpoint;
+            _logger = logger;
         }
 
         [HttpPut]
@@ -31,6 +33,9 @@ namespace Marketing.API.Controllers
                 {
                     Id = _plate.Id,
                 });
+
+                _logger.LogInformation($"Plate sold with registration {registration} at {DateTime.Now}");
+                _logger.LogInformation($"Event raised to update Commercial and Sales db's with sold plate, registration {registration}");
 
                 return Ok(JsonSerializer.Serialize(_plate));
             }

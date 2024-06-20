@@ -20,5 +20,9 @@ namespace Commercial.API.Interfaces
         public Task<Plate> ReservePlate(string registration);
 
         public Task<Plate> UnreservePlate(string registration);
+
+        public Task<int> GetAvailablePlateCount(string filter);
+
+        public Task<IEnumerable<Plate>> GetFilteredUnsold(string letters, int pageNumber, int pageSize);
     }
 }

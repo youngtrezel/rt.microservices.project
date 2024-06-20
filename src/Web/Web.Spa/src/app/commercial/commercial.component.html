@@ -1,0 +1,19 @@
+<div class="tabs">
+    <ul>
+      <li [ngClass]="{'is-active': add==true}" ><a (click)="isSelectedPage('add')">Add Plate</a></li>
+      <li [ngClass]="{'is-active': reserve==true}" ><a (click)="isSelectedPage('reserve')">Reserve Plate</a></li>
+      <li [ngClass]="{'is-active': sell==true}" ><a (click)="isSelectedPage('sell')">For Sale Plates</a></li>
+    </ul>
+  </div>
+
+  <div class="block">
+    @if(add==true) {
+        <app-add-plates></app-add-plates>
+    } 
+    @if(reserve==true){
+        <app-reserve-plates></app-reserve-plates>
+    }
+    @if(sell==true) {
+        <app-for-sale-plates></app-for-sale-plates>
+    }
+  </div>

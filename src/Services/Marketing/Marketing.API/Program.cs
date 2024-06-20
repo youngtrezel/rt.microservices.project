@@ -10,15 +10,28 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Events;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 string name = typeof(Program).Assembly.GetName().Name;
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins(["http://localhost:4200"])
+                            .AllowAnyMethod()
+                            .AllowAnyHeader());
+});
+
 //Serilog setup
 Log.Information("Configuring Serilog");
-var host = Host.CreateDefaultBuilder(args)
-    .UseSerilog()
-    .Build();
+
+builder.Host
+    .UseSerilog();
+
+builder.Services.AddHealthChecks()
+    .AddCheck("self", () => HealthCheckResult.Healthy());
+
 
 var logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
@@ -87,6 +100,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowSpecificOrigin");
+
+app.UseHealthChecks("/health");
 
 app.UseHttpsRedirection();
 

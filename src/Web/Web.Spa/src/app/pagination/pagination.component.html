@@ -1,0 +1,12 @@
+<nav class="pagination is-centered is-small" role="navigation" aria-label="pagination">
+  <a (click)="previousPage()" class="pagination-previous">Previous</a>
+  <a (click)="nextPage()" class="pagination-next">Next</a>
+  <ul class="pagination-list">
+    @for(page of pages; track $index) {
+    @if(page % 2 == 0 || page == 1 || page == pages.length || page==currentPage) {
+    <li><a (click)="pageClicked(page)" class="pagination-link"
+        [ngClass]="{'is-current': page==currentPage}">{{page}}</a></li>
+    }
+    }
+  </ul>
+</nav>
