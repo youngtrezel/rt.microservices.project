@@ -15,6 +15,7 @@ namespace Marketing.Infrastructure.Configurations;
                 x.AddConsumer<PlateAddedEventConsumer>();
                 x.AddConsumer<PlateReservedEventConsumer>();
                 x.AddConsumer<PlateUnreservedEventConsumer>();
+                x.AddConsumer<PlateSoldEventConsumer>();
 
                 x.UsingRabbitMq((cxt, cfg) =>
                 {
@@ -22,6 +23,11 @@ namespace Marketing.Infrastructure.Configurations;
                     {
                         host.Username("guest");
                         host.Password("guest");
+                    });
+
+                    cfg.ReceiveEndpoint(QueuesConsts.PlateSoldEventQueueName + "-marketing", q =>
+                    {
+                        q.ConfigureConsumer<PlateSoldEventConsumer>(cxt);
                     });
 
                     cfg.ReceiveEndpoint(QueuesConsts.PlateAddedEventQueueName + "-marketing", q =>

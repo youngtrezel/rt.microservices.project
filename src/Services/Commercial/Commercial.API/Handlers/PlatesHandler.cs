@@ -35,7 +35,7 @@ namespace Commercial.API.Handlers
 
         public async Task<IEnumerable<Plate>> GetUnsoldPlates(int pageNumber, int pageSize)
         {
-            var plates = await _plateRepository.GetUnsoldPlates(pageNumber, pageSize);
+            var plates = await _plateRepository.GetPlates(pageNumber, pageSize);
 
             return plates;
         }

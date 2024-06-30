@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12461745-C938-42D3-92EF-6853B2E2AD04}|src\\Web\\Web.Spa\\Web.Spa.esproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\web\\web.spa\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{12461745-C938-42D3-92EF-6853B2E2AD04}|src\\Web\\Web.Spa\\Web.Spa.esproj|solutionrelative:src\\web\\web.spa\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\sales\\sales.api\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|solutionrelative:src\\services\\sales\\sales.api\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{174B2924-2DC7-420E-B5F8-00E07B18E9AD}|src\\Services\\Sales\\Sales.Repository\\Sales.Repository.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\sales\\sales.repository\\interfaces\\iplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174B2924-2DC7-420E-B5F8-00E07B18E9AD}|src\\Services\\Sales\\Sales.Repository\\Sales.Repository.csproj|solutionrelative:src\\services\\sales\\sales.repository\\interfaces\\iplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CCC0F3B8-17A3-4224-8902-37D14E480CA0}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\sales\\sales.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|solutionrelative:src\\services\\sales\\sales.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578}|src\\Services\\Commercial\\Tests\\Commercial.Tests\\Commercial.Tests.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\tests\\commercial.tests\\handlertests\\platehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578}|src\\Services\\Commercial\\Tests\\Commercial.Tests\\Commercial.Tests.csproj|solutionrelative:src\\services\\commercial\\tests\\commercial.tests\\handlertests\\platehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\sales\\sales.api\\interfaces\\iplateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937FB986-0CBD-4F71-AE58-F42B147B7C19}|src\\Services\\Sales\\Sales.API\\Sales.API.csproj|solutionrelative:src\\services\\sales\\sales.api\\interfaces\\iplateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\commercial\\commercial.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CC8200-E1E1-4728-B1DF-6A592849D0FC}|src\\Services\\Commercial\\Commercial.API\\Commercial.API.csproj|solutionrelative:src\\services\\commercial\\commercial.api\\handlers\\plateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{174B2924-2DC7-420E-B5F8-00E07B18E9AD}|src\\Services\\Sales\\Sales.Repository\\Sales.Repository.csproj|c:\\users\\wayne\\source\\repos\\applications\\rt project\\src\\services\\sales\\sales.repository\\platerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174B2924-2DC7-420E-B5F8-00E07B18E9AD}|src\\Services\\Sales\\Sales.Repository\\Sales.Repository.csproj|solutionrelative:src\\services\\sales\\sales.repository\\platerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 669,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 918,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,73 +46,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Dockerfile",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Dockerfile",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Dockerfile",
-              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-06-20T07:23:17.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Web\\Web.Spa\\Dockerfile",
-              "RelativeDocumentMoniker": "src\\Web\\Web.Spa\\Dockerfile",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Web\\Web.Spa\\Dockerfile",
-              "RelativeToolTip": "src\\Web\\Web.Spa\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-06-20T07:23:08.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-06-20T07:21:12.738Z",
+              "Title": "PlatesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Handlers\\PlatesHandler.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Sales\\Sales.API\\Handlers\\PlatesHandler.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Handlers\\PlatesHandler.cs",
+              "RelativeToolTip": "src\\Services\\Sales\\Sales.API\\Handlers\\PlatesHandler.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T21:57:45.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PlateHandlerTests.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
-              "RelativeToolTip": "src\\Services\\Commercial\\Tests\\Commercial.Tests\\HandlerTests\\PlateHandlerTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAApAAAA",
+              "Title": "IPlatesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Interfaces\\IPlatesHandler.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Sales\\Sales.API\\Interfaces\\IPlatesHandler.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Interfaces\\IPlatesHandler.cs",
+              "RelativeToolTip": "src\\Services\\Sales\\Sales.API\\Interfaces\\IPlatesHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T06:40:52.354Z",
+              "WhenOpened": "2024-06-29T21:57:37.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlateRepository.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.Repository\\PlateRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Sales\\Sales.Repository\\PlateRepository.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.Repository\\PlateRepository.cs",
+              "RelativeToolTip": "src\\Services\\Sales\\Sales.Repository\\PlateRepository.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAIwAsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T21:53:49.544Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 603,
+          "DockedWidth": 918,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlatesHandler.cs",
-              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
-              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
-              "RelativeToolTip": "src\\Services\\Commercial\\Commercial.API\\Handlers\\PlatesHandler.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAYwBUAAAAVAAAA",
+              "DocumentIndex": 0,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Sales\\Sales.API\\Controllers\\SalesController.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.API\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "src\\Services\\Sales\\Sales.API\\Controllers\\SalesController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAIwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T06:43:07.933Z",
+              "WhenOpened": "2024-06-29T22:01:04.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPlateRepository.cs",
+              "DocumentMoniker": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.Repository\\Interfaces\\IPlateRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Sales\\Sales.Repository\\Interfaces\\IPlateRepository.cs",
+              "ToolTip": "C:\\Users\\wayne\\source\\repos\\Applications\\RT Project\\src\\Services\\Sales\\Sales.Repository\\Interfaces\\IPlateRepository.cs",
+              "RelativeToolTip": "src\\Services\\Sales\\Sales.Repository\\Interfaces\\IPlateRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T21:54:42.807Z",
               "EditorCaption": ""
             }
           ]

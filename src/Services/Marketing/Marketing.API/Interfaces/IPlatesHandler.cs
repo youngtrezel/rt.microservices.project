@@ -7,8 +7,10 @@ namespace Marketing.API.Interfaces
     {
         public Task<Plate?> SellPlate(string registration);
 
-        public Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize);
+        public Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize, bool ascending);
 
-        public Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize);
+        public Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending);
+
+        public Task<int> GetFilteredPlatesCount(string letters);
     }
 }

@@ -22,40 +22,29 @@ namespace Marketing.API.Controllers
             _logger = logger;
         }
 
-        [HttpPut]
-        [Route("sellplate")]
-        public async Task<ActionResult<Plate>> AddPlate(string registration)
-        {
-            var _plate = await _platesHandler.SellPlate(registration);
-            if (_plate != null)
-            {
-                await _publishEndpoint.Publish(new PlateSoldEvent
-                {
-                    Id = _plate.Id,
-                });
-
-                _logger.LogInformation($"Plate sold with registration {registration} at {DateTime.Now}");
-                _logger.LogInformation($"Event raised to update Commercial and Sales db's with sold plate, registration {registration}");
-
-                return Ok(JsonSerializer.Serialize(_plate));
-            }
-            return BadRequest();
-        }
-
         [HttpGet]
         [Route("getplates")]
-        public ActionResult<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize)
+        public async Task<ActionResult<IEnumerable<Plate>>> GetPlates(int pageNumber, int pageSize, bool ascending)
         {
-            var results = _platesHandler.GetPaginationPlates(pageNumber, pageSize);
+            var results = await _platesHandler.GetPaginationPlates(pageNumber, pageSize, ascending);
 
             return Ok(JsonSerializer.Serialize(results));
         }
 
         [HttpGet]
         [Route("getfilteredplates")]
-        public ActionResult<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize)
+        public async Task<ActionResult<IEnumerable<Plate>>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending)
         {
-            var results = _platesHandler.GetFilteredPlates(letters, pageNumber, pageSize);
+            var results = await _platesHandler.GetFilteredPlates(letters, pageNumber, pageSize, ascending);
+
+            return Ok(JsonSerializer.Serialize(results));
+        }
+
+        [HttpGet]
+        [Route("filteredplatecount")]
+        public ActionResult<int> GetFilteredPlateCount(string letters)
+        {
+            var results = _platesHandler.GetFilteredPlatesCount(letters);
 
             return Ok(JsonSerializer.Serialize(results));
         }

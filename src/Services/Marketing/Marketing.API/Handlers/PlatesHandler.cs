@@ -2,6 +2,7 @@
 using Marketing.Domain.Models;
 using Marketing.Domain.Models.Data;
 using Marketing.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Marketing.API.Handlers
 {
@@ -31,16 +32,23 @@ namespace Marketing.API.Handlers
             return plate;
         }
 
-        public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize)
+        public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize, bool ascending)
         {
-            var plates = await _plateRepository.GetPlates(pageNumber, pageSize);
+            var plates = await _plateRepository.GetPaginationPlates(pageNumber, pageSize, ascending);
 
             return plates;
         }
 
-        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize)
+        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending)
         {
-            var plates = await _plateRepository.GetFilteredPlates(letters, pageNumber, pageSize);
+            var plates = await _plateRepository.GetFilteredPlates(letters, pageNumber, pageSize, ascending);
+
+            return plates;
+        }
+
+        public async Task<int> GetFilteredPlatesCount(string letters)
+        {
+            var plates = await _plateRepository.GetFilteredPlatesCount(letters);
 
             return plates;
         }

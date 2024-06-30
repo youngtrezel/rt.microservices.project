@@ -40,7 +40,7 @@
       ],
       "UpstreamPathTemplate": "/sales/{everything}",
       "UpstreamScheme": "http",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get", "Put" ]
     }
 
   ],

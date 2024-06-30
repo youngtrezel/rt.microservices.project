@@ -40,10 +40,6 @@ namespace Sales.Infrastructure.Configurations;
                         q.ConfigureConsumer<PlateUnreservedEventConsumer>(cxt);
                     });
 
-                    cfg.ReceiveEndpoint(QueuesConsts.PlateSoldEventQueueName + "-sales", q =>
-                    {
-                        q.ConfigureConsumer<PlateSoldEventConsumer>(cxt);
-                    });
                 });
             });
 

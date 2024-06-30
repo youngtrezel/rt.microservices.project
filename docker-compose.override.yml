@@ -1,6 +1,7 @@
 version: '3.4'
 
 services:
+
   commercial.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -68,6 +69,7 @@ services:
 volumes:
   rt-sqlserver:
     external: false 
+  node_modules:
     
 
 

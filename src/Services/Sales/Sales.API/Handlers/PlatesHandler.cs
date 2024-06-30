@@ -16,6 +16,27 @@ namespace Sales.API.Handlers
             _plateRepository = plateRepository;
         }
 
+        public async Task<int> GetPlateCount(string filter)
+        {
+            var plateCount = await _plateRepository.GetAvailablePlateCount(filter);
+
+            return plateCount;
+        }
+
+        public async Task<int> GetSoldPlateCount()
+        {
+            var plateCount = await _plateRepository.GetSoldPlateCount();
+
+            return plateCount;
+        }
+
+        public async Task<IEnumerable<Plate>> GetSoldPlates(int pageNumber, int pageSize)
+        {
+            var plates = await _plateRepository.GetSoldPlates(pageNumber, pageSize);
+
+            return plates;
+        }
+
         public async Task<IEnumerable<Plate>> GetUnreservedPlates(int pageNumber, int pageSize)
         {
             var plates = await _plateRepository.GetPlates(pageNumber, pageSize);
@@ -23,14 +44,19 @@ namespace Sales.API.Handlers
             return plates;
         }
 
-        public Plate SellPlate(Plate plate, decimal soldPrice)
+        public async Task<Plate> SellPlate(string registration)
         {
-            plate.DateSold = DateTime.Now;
-            plate.PriceSoldFor = soldPrice;
-            plate.Sold = true;
-            plate.Reserved = false;
+            var plate = await _plateRepository.GetPlate(registration);
 
-            _plateRepository.UpdatePlate(plate);
+            if (plate == null)
+            {
+                var emptyPlate = new Plate();
+                return emptyPlate;
+            }
+
+            plate.Sold = true;
+
+            await _plateRepository.UpdatePlate(plate);
 
             return plate;
         }

@@ -4,6 +4,7 @@ using Marketing.Domain.Models.Data;
 using Marketing.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Marketing.Infrastructure.Data;
+using EventBus.Events.Interfaces;
 
 namespace Marketing.Repository
 {
@@ -21,7 +22,6 @@ namespace Marketing.Repository
             return await _context.Plates.Where(x => x.Registration == registration).Select(x => x).FirstOrDefaultAsync();
         }
 
-
         public async Task<Plate?> UpdatePlate(Plate plate)
         {
             var updatePlate = await _context.Plates.FirstAsync(p => p.Id == plate.Id);
@@ -38,46 +38,101 @@ namespace Marketing.Repository
             return plate;
         }
 
-        public async Task<IEnumerable<Plate>> GetPlates(int pageNumber, int pageSize)
+        public async Task<IEnumerable<Plate>> GetPaginationPlates(int pageNumber, int pageSize, bool ascending)
         {
-            var plates = await _context.Plates.AsNoTracking()
-                .OrderByDescending(x => x.SalePrice)
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
+            IQueryable<Plate> platesQuery = _context.Plates.Where(x => x.Sold == false);
 
-            return plates;
+            var plates = platesQuery.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+
+            if (ascending)
+            {
+                return await plates.OrderBy(x => x.SalePrice).ToListAsync();
+            } else
+            {
+                return await plates.OrderByDescending(x => x.SalePrice).ToListAsync();
+            }
+
         }
 
-        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize)
+        public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending)
         {
-            IEnumerable<Plate> plates = [];
+            int num;
 
-            if (!string.IsNullOrEmpty(letters))
+            if (int.TryParse(letters, out num))
             {
-                int num;
+                IQueryable<Plate> platesQuery = _context.Plates.Where(x => x.Numbers.ToString().Contains(letters));
 
-                if (int.TryParse(letters, out num))
+                var plates = platesQuery.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+
+                if (ascending)
                 {
-                    plates = await _context.Plates.AsNoTracking()
-                        .Where(x => x.Numbers.ToString().Contains(letters))
-                        .OrderByDescending(x => x.SalePrice)
-                        .Skip((pageNumber - 1) * pageSize)
-                        .Take(pageSize)
-                        .ToListAsync();
+                    return await plates.OrderBy(x => x.SalePrice).ToListAsync();
                 }
                 else
                 {
-                    plates = await _context.Plates.AsNoTracking()
-                        .Where(x => x.Letters.Contains(letters))
-                        .OrderByDescending(x => x.SalePrice)
-                        .Skip((pageNumber - 1) * pageSize)
-                        .Take(pageSize)
-                        .ToListAsync();
+                    return await plates.OrderByDescending(x => x.SalePrice).ToListAsync();
                 }
             }
+            else
+            {
+                IQueryable<Plate> platesQuery = _context.Plates.Where(x => x.Letters.Contains(letters));
 
-            return plates;
+                var plates = platesQuery.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+
+                if (ascending)
+                {
+                    return await plates.OrderBy(x => x.SalePrice).ToListAsync();
+                }
+                else
+                {
+                    return await plates.OrderByDescending(x => x.SalePrice).ToListAsync();
+                }
+
+            }
+        }
+
+        public async Task<int> GetAvailablePlateCount(string filter)
+        {
+            switch (filter)
+            {
+                case "sold":
+
+                    IQueryable<Plate> unreservedQuery = _context.Plates.Where(p => p.Sold == false);
+
+                    return await unreservedQuery.CountAsync();
+                    
+                case "unreserved":
+
+                    IQueryable<Plate> soldQuery = _context.Plates.Where(p => p.Sold == false && p.Reserved == false);
+
+                    return await soldQuery.CountAsync();
+                    
+                default:
+                    return 0;
+                    
+            }
+        }
+
+        public async Task<int> GetFilteredPlatesCount(string letters)
+        {
+            int num;
+
+            if (int.TryParse(letters, out num))
+            {
+                IQueryable<Plate> platesQuery = _context.Plates.Where(x => x.Numbers.ToString().Contains(letters) && x.Sold == false);
+
+                var platesCount = await platesQuery.CountAsync();
+
+                return platesCount;
+            }
+            else
+            {
+                IQueryable<Plate> platesQuery = _context.Plates.Where(x => x.Letters.ToString().Contains(letters) && x.Sold == false);
+
+                var platesCount = await platesQuery.CountAsync();
+
+                return platesCount;
+            }
         }
     }
 }
