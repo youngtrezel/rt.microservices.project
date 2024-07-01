@@ -60,5 +60,9 @@ namespace Sales.API.Handlers
 
             return plate;
         }
+        public async Task<decimal> GetRevenue()
+        {
+            return await _plateRepository.GetRevenue();
+        }
     }
 }

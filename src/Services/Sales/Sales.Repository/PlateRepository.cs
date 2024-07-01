@@ -105,5 +105,21 @@ namespace Sales.Repository
             }
 
         }
+
+        public async Task<decimal> GetRevenue()
+        {
+            try
+            {
+                IQueryable<decimal> salePricesQuery = _context.Plates.Where(p => p.Sold == true).Select(x => x.SalePrice); ;
+
+                decimal result = await salePricesQuery.SumAsync();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }

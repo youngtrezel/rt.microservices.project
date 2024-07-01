@@ -48,5 +48,7 @@ namespace Marketing.API.Controllers
 
             return Ok(JsonSerializer.Serialize(results));
         }
+
+
     }
 }

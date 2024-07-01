@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AA536865-202F-4BB8-8682-9192A29472C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F71F7B9E-EC12-4E76-B41C-6E4B1A3BEBB6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commercial", "Commercial", "{502C7926-DF90-4C63-B1A2-3C23A130C188}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commercial.API", "src\Services\Commercial\Commercial.API\Commercial.API.csproj", "{56CC8200-E1E1-4728-B1DF-6A592849D0FC}"
@@ -52,14 +50,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DFF8D25F-E240-45DB-9103-262A6D2EF16A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commercial.Tests", "src\Services\Commercial\Tests\Commercial.Tests\Commercial.Tests.csproj", "{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SPA", "SPA", "{08A8473C-24AF-4658-B4A4-9560F540B6BE}"
-	ProjectSection(SolutionItems) = preProject
-		src\Web\SPA\.dockerignore = src\Web\SPA\.dockerignore
-		src\Web\SPA\Dockerfile = src\Web\SPA\Dockerfile
-		src\Web\SPA\package-lock.json = src\Web\SPA\package-lock.json
-		src\Web\SPA\package.json = src\Web\SPA\package.json
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,7 +147,6 @@ Global
 		{B86CAB6B-2ED2-4678-987C-7956D67D905D} = {5F6C516E-8426-4A95-BEF1-15791C06E94D}
 		{DFF8D25F-E240-45DB-9103-262A6D2EF16A} = {502C7926-DF90-4C63-B1A2-3C23A130C188}
 		{FEA3B4CE-2048-4E20-99CC-CFD59F7B2578} = {DFF8D25F-E240-45DB-9103-262A6D2EF16A}
-		{08A8473C-24AF-4658-B4A4-9560F540B6BE} = {F71F7B9E-EC12-4E76-B41C-6E4B1A3BEBB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {955B89B4-9B94-4AAB-A331-9888F7C54C8C}

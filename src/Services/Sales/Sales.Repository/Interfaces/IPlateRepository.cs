@@ -14,5 +14,7 @@ namespace Sales.Repository.Interfaces
         public Task<int> GetSoldPlateCount();
 
         public Task<IEnumerable<Plate>> GetSoldPlates(int pageNumber, int pageSize);
+
+        public Task<decimal> GetRevenue();
     }
 }

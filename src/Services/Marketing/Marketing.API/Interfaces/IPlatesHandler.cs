@@ -12,5 +12,7 @@ namespace Marketing.API.Interfaces
         public Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending);
 
         public Task<int> GetFilteredPlatesCount(string letters);
+
+        
     }
 }

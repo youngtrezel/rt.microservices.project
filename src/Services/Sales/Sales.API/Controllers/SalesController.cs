@@ -79,9 +79,20 @@ namespace Sales.API.Controllers
                 return Ok(JsonSerializer.Serialize(_plate));
             }
             return BadRequest();
+        }
 
+        [HttpGet]
+        [Route("getrevenue")]
+        public async Task<ActionResult<decimal>> GetRevenue()
+        {
+            var result = _platesHandler.GetRevenue();
 
-            return Ok(JsonSerializer.Serialize(_plate));
+            if (result == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(JsonSerializer.Serialize(result));
         }
 
     }

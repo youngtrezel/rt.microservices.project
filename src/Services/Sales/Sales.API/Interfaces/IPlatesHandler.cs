@@ -14,5 +14,7 @@ namespace Sales.API.Interfaces
         public Task<IEnumerable<Plate>> GetSoldPlates(int pageNumber, int pageSize);
 
         public Task<Plate> SellPlate(string registration);
+
+        public Task<decimal> GetRevenue();
     }
 }

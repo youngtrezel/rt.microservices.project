@@ -56,6 +56,13 @@ namespace Marketing.Repository
 
         public async Task<IEnumerable<Plate>> GetFilteredPlates(string letters, int pageNumber, int pageSize, bool ascending)
         {
+            IQueryable<Plate> plateFound = _context.Plates.Where(x => x.Registration == letters);
+
+            if(plateFound.Count() > 0)
+            {
+                return await plateFound.ToListAsync();
+            }
+
             int num;
 
             if (int.TryParse(letters, out num))
@@ -112,6 +119,8 @@ namespace Marketing.Repository
                     
             }
         }
+
+
 
         public async Task<int> GetFilteredPlatesCount(string letters)
         {

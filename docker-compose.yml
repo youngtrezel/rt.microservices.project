@@ -2,16 +2,6 @@ version: '3.4'
 
 services:
   
-  web.spa:
-    build: src/web/spa
-    command: sh -c "npm start"
-    ports:
-    - 4200:4200
-    working_dir: /home/node/spa
-    volumes: 
-    - ./:/home/node/spa
-    - node_modules:/home/spa/node_modules
-
   commercial.api:
     image: ${DOCKER_REGISTRY-}commercialapi
     build:
@@ -39,8 +29,6 @@ services:
   rabbitmq:
     image: rabbitmq:3.13-management
 
-volumes:
-  node_modules:
 
 
 

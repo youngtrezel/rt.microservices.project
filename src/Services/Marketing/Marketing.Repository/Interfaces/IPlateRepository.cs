@@ -15,5 +15,7 @@ namespace Marketing.Repository.Interfaces
         public Task<int> GetAvailablePlateCount(string filter);
 
         public Task<int> GetFilteredPlatesCount(string letters);
+
+        
     }
 }
